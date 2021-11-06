@@ -1,0 +1,24 @@
+.tv_cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:space-around;
+}
+.title {
+   font-size: 34px;
+   text-align: center;
+   margin-bottom: 15px;
+   color:rgb(184, 24, 99);
+   font-weight: 700;
+}
+
+ @media (max-width: 1000px) {
+   .title {
+     font-size: 6.4vw;
+   }
+ }
+
+ @media (max-width: 700px) {
+   .title {
+     font-size: 4.4vw;
+   }
+ }

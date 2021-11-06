@@ -1,0 +1,103 @@
+.card{
+   display: flex;
+   flex-direction: column;
+   width: 200px;
+   padding: 5px;
+   margin: 15px 0;
+   background-color: #282c34;
+   border-radius: 10px;
+   position: relative;
+}
+.card:hover {
+   background-color: rgb(171, 193, 233);
+   color: black;
+ }
+ 
+ .modalContent {
+   display:flex;
+   justify-content: space-between;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+   overflow-y: scroll;
+   scrollbar-width: none;
+ }
+ 
+ .modalContent::-webkit-scrollbar {
+   display: none;
+ }
+ .modalContent_landscape {
+   object-fit:contain;
+   border-radius: 10px;
+ }
+ 
+ .modalContent_portrait {
+   display: none;
+   object-fit: contain;
+   border-radius: 10px;
+ }
+ 
+ .tagline {
+   padding-bottom: 10px;
+   align-self: center;
+ }
+ 
+ .modalContent_about {
+   padding: 10px;
+   width: 95%;
+   height: 90%;
+   display: flex;
+   flex-direction: column;
+   font-family: "Roboto", sans-serif;
+   justify-content: space-evenly;
+   font-weight: 300;
+ }
+ 
+ .modalContent_title {
+   height: 12%;
+   font-size: 5vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ .modalContent_description {
+   display: flex;
+   height: 40%;
+   overflow-y: scroll;
+   padding: 15px;
+   border-radius: 20px;
+   scrollbar-width: thin; /* Firefox */
+   box-shadow: inset 0 0 5px #000000;
+   text-align: justify;
+ }
+ 
+ .modalContent_description::-webkit-scrollbar {
+   display: none;
+ }
+ 
+ @media (min-width: 835px) {
+   .modalContent_landscape {
+     display: none;
+   }
+   .modalContent_portrait {
+     display: flex;
+     width: 38%;
+   }
+   .modalContent {
+     flex-direction: row;
+     justify-content: space-around;
+     padding: 10px 0;
+   }
+   .modalContent_about {
+     width: 58%;
+     padding: 0;
+     height: 100%;
+   }
+   .modalContent_title {
+     font-size: 3.5vw;
+   }
+   .modalContent_description {
+     font-size: 22px;
+   }
+ }
