@@ -1,11 +1,10 @@
 import React from 'react';
-
 import { useEffect } from 'react';
 import Chip from '@material-ui/core/Chip';
 import { useDispatch, useSelector } from 'react-redux'
-import {loadGenres, addGenre, removeGenre} from '../../redux/ducks/genres'
+import {loadGenres, addGenre, removeGenre} from '../../redux/ducks/movieGenres'
 
-function Genres({
+function MovieGenres({
   type,
   setPage,
 }) {
@@ -18,8 +17,8 @@ function Genres({
       // eslint-disable-next-line
     }, []);
   
-   const genres = useSelector(state => state.genres.items)
-   const selectedGenres = useSelector(state => state.genres.selectedItems)
+   const genres = useSelector(state => state.movieGenres.items)
+   const selectedGenres = useSelector(state => state.movieGenres.selectedItems)
    const handleAddGenre = (genre) => {
    dispatch(addGenre(genre))
    setPage(1)
@@ -56,4 +55,4 @@ function Genres({
   );
 }
 
-export default Genres;
+export default MovieGenres;

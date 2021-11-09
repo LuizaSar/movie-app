@@ -1,10 +1,9 @@
 import React from 'react';
-import axios from "axios";
 import { useEffect, useState } from "react";
 import styles from './TvSeries.module.css'
 import ContentCard from '../../ContentCard/index'
-import CustomPagination from '../../Pagination/index'
-import Genres from '../../Genres/index'
+import CustomPagination from '../../CustomPagination/index'
+import SeriesGenres from '../../Genres/SeriesGenres'
 import {useSelector, useDispatch} from 'react-redux'
 import { loadTVSeries } from '../../../redux/ducks/tvSeries';
 
@@ -12,7 +11,7 @@ function TvSeries() {
 
    const [page, setPage] = useState(1);
    const [numOfPages, setNumOfPages] = useState();
-   const selectedGenres = useSelector(state => state.genres.selectedItems)
+   const selectedGenres = useSelector(state => state.seriesGenres.selectedItems)
    const series = useSelector(state => state.tvSeries.items)
    const pages = useSelector(state => state.tvSeries.pages)
    const dispatch = useDispatch();
@@ -40,7 +39,7 @@ function TvSeries() {
    return (
       <div>
           <div className={styles.title}>TV Series</div>
-          <Genres
+          <SeriesGenres
                   type="tv"
                   setPage={setPage}
          />

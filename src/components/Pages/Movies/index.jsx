@@ -1,10 +1,9 @@
 import React from 'react'
-import axios from "axios";
 import { useEffect, useState } from "react";
 import styles from './Movies.module.css'
 import ContentCard from '../../ContentCard/index'
-import CustomPagination from '../../Pagination/index'
-import Genres from '../../Genres/index'
+import CustomPagination from '../../CustomPagination/index'
+import MovieGenres from '../../Genres/MovieGenres'
 import { useDispatch, useSelector } from 'react-redux'
 import {loadMovies} from '../../../redux/ducks/movies'
 
@@ -12,7 +11,7 @@ import {loadMovies} from '../../../redux/ducks/movies'
 function Movies() {
    const [page, setPage] = useState(1);
    const [numOfPages, setNumOfPages] = useState();
-   const selectedGenres = useSelector(state => state.genres.selectedItems)
+   const selectedGenres = useSelector(state => state.movieGenres.selectedItems)
    const movies = useSelector(state => state.movies.items)
    const pages = useSelector(state => state.movies.pages)
 
@@ -38,7 +37,7 @@ function Movies() {
    return (
       <div>
          <div className={styles.title}>Movies</div>
-         <Genres
+         <MovieGenres
                   type="movie"
                   setPage={setPage}
          />

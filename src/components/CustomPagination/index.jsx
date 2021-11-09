@@ -16,7 +16,9 @@ function CustomPagination({setPage,numOfPages}) {
          marginTop: 10,
        }}
        > 
-         <Pagination count={numOfPages} color="secondary"  
+         <Pagination 
+         count={numOfPages} 
+         color="secondary"  
          onChange={(e)=> handlePageChange(e.target.textContent)}
          hideNextButton
          hidePrevButton

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Trending.module.css'
 import {useState, useEffect} from "react"
 import ContentCard from '../../ContentCard/index'
-import CustomPagination from '../../Pagination/index'
+import CustomPagination from '../../CustomPagination/index'
 import { useDispatch, useSelector } from 'react-redux'
 import {loadTrending} from "../../../redux/ducks/trending"
 

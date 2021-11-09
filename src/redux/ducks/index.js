@@ -1,9 +1,9 @@
 import movies from './movies';
 import tvSeries from './tvSeries';
 import trending from './trending';
-import genres from './genres';
-import movieGenres from './movieGenres'
-import tvGenres from './tvGenres'
+import movieGenres from './movieGenres';
+import seriesGenres from './seriesGenres'
 
 
-export {movies, tvSeries, trending, genres, movieGenres, tvGenres}
+
+export {movies, tvSeries, trending, movieGenres, seriesGenres}

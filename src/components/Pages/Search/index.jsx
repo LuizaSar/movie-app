@@ -11,7 +11,7 @@ import {
 import  SearchIcon from '@material-ui/icons/Search';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import CustomPagination from '../../Pagination/index';
+import CustomPagination from '../../CustomPagination/index';
 import ContentCard from '../../ContentCard/index';
 
 
@@ -28,7 +28,7 @@ function Search() {
     palette: {
       type: 'dark',
       primary: {
-        main: '#fff',
+        main: '#9b116d',
       },
     },
   });
@@ -65,7 +65,7 @@ function Search() {
           <Button
             onClick={fetchSearch}
             variant="contained"
-            style={{ marginLeft: 10 }}
+            style={{ marginLeft: 10, color: '#9b116d' }}
           >
             <SearchIcon fontSize="large" />
           </Button>
